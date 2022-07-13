@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+    margin: 0px 0px;
+}
+
+header{
+    text-align: center;
+    background-color: rgb(192, 219, 255);
+    padding: 15px 0px 2px 0px;
+    border-bottom: solid 2px rgb(152,197,255);
+}
+
+h1{
+    padding: 15px 0px 2px 0px;
+}
+
+h3,
+h4,
+h5{
+    padding: 10px 5px;
+}
+
+i,
+.fa{
+    display: inline-block;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(225, 237, 253);
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    height: 90vh;
+}
+
+.outbox{
+    background-color: whitesmoke;
+    width: auto;
+    margin: 10px 5px;
+    padding: 0px 10px;
+    border: solid 2px rgb(152, 197, 255);
+    border-radius: 5px;
+    height: 35vh;
+}
+
+div{
+    background-color: whitesmoke;
+    width: auto;
+    margin: 10px 5px;
+    padding: 0px 10px;
+    border: solid 2px rgb(152, 197, 255);
+    border-radius: 5px;
+}
