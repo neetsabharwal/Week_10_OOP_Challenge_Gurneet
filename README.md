@@ -35,10 +35,10 @@ THEN I exit the application, and the HTML is generated
 ## Review
 
 * A walkthrough video demonstrating the functionality of the application and passing tests:
-
+https://user-images.githubusercontent.com/74340217/178890531-78018773-aa2d-4cea-9237-df88182df07e.mp4
 
 * A sample HTML file generated using your application:
-
+https://github.com/neetsabharwal/Week_10_OOP_Challenge_Gurneet/blob/master/dist/index.html
 
 * The URL of the GitHub repository:
 https://github.com/neetsabharwal/Week_10_OOP_Challenge_Gurneet
