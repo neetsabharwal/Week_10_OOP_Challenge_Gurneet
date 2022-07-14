@@ -1,6 +1,40 @@
-const template = (employees) => {
- return
-`<!DOCTYPE html>
+function template(employees) {
+
+    let enggdivs = '';
+    let interndivs = '';
+    for(i=0;i<employees.length;i++){
+        if(employees[i].role==='Engineer'){
+            enggdivs += `<div class="outbox engineer">
+            <div>
+                <h3>${employees[i].name}</h3>
+                <i class="fa fa-book"></i><h4>Engineer</h4>
+            </div>
+            <div>
+                <h5>ID: ${employees[i].id}</h5>
+                <h5><a href="mailto:${employees[i].email}">Email: ${employees[i].email}</a></h5>
+                <h5>Github: <a href="https://github.com/${employees[i].username}" target="_blank">${employees[i].username}</a></h5>
+            </div>
+        </div>`
+        }
+    }
+    
+    for(i=0;i<employees.length;i++){
+        if(employees[i].role==='Intern'){
+            interndivs += `<div class="outbox intern">
+            <div>
+                <h3>${employees[i].name}</h3>
+                <i class="fa fa-child"></i><h4>Intern</h4>
+            </div>
+            <div>
+                <h5>ID: ${employees[i].id}</h5>
+                <h5><a href="mailto:${employees[i].email}">Email: ${employees[i].email}</a></h5>
+                <h5>School: ${employees[i].school}</h5>
+            </div>
+        </div>`
+        }
+    }
+
+    return `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,28 +60,8 @@ const template = (employees) => {
                 <h5>Phone: 1234567890</h5>
             </div>
         </div>
-        <div class="outbox">
-            <div>
-                <h3>${employees[1].name}</h3>
-                <i class="fa fa-book"></i><h4>Engineer</h4>
-            </div>
-            <div>
-                <h5>ID: ${employees[1].id}</h5>
-                <h5><a href="mailto:${employees[1].email}">Email: ${employees[1].email}</a></h5>
-                <h5>Github: <a href="https://github.com/${employees[1].username}" target="_blank">${employees[1].username}</h5>
-            </div>
-        </div>
-        <div class="outbox">
-            <div>
-                <h3>${employees[2].name}</h3>
-                <i class="fa fa-child"></i><h4>Intern</h4>
-            </div>
-            <div>
-                <h5>ID: ${employees[2].id}</h5>
-                <h5><a href="mailto:${employees[2].email}">Email: ${employees[2].email}</a></h5>
-                <h5>School: ${employees[2].school}</h5>
-            </div>
-        </div>
+        ${enggdivs}
+        ${interndivs}
     </section>
 </body>
 </html>`

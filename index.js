@@ -97,7 +97,10 @@ function buildTeam() {
     .then((data) => {
       if (data.employeetype === "No more additions") {
         htmlTemplate = template(employees);
-        console.log(htmlTemplate);
+        fs.writeFileSync(`./dist/index.html`,htmlTemplate,(err)=>{
+          if(err) throw(err)
+        })
+        //console.log(htmlTemplate);
         return ;
       } else if (data.employeetype === "Engineer") {
         inquirer.prompt(questions2).then((data) => {
@@ -119,6 +122,8 @@ function buildTeam() {
       }
     })
 }
+
+
 
 init();
 
