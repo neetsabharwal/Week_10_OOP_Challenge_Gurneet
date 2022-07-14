@@ -6,6 +6,7 @@ const Employee = require("./lib/Employee.js");
 const fs = require('fs');
 const template = require('./src/template.js');
 
+let htmlTemplate = '';
 let employees = [];
 let questions1 = [
   {
@@ -80,6 +81,7 @@ function init() {
   inquirer.prompt(questions1).then((data) => {
     let manager = new Manager(data.name, data.id, data.email, data.phone);
     employees.push(manager);
+    //console.log(employees);
     buildTeam();
   });
 }
@@ -94,6 +96,8 @@ function buildTeam() {
     })
     .then((data) => {
       if (data.employeetype === "No more additions") {
+        htmlTemplate = template(employees);
+        console.log(htmlTemplate);
         return ;
       } else if (data.employeetype === "Engineer") {
         inquirer.prompt(questions2).then((data) => {
